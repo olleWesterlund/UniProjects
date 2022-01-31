@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<fx:root fx:id="accountPane" prefHeight="600.0" prefWidth="1050.0" style="-fx-background-color: FFFFF8;" styleClass="list-item" stylesheets="@../iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="firstNameLabel" layoutX="50.0" layoutY="21.0" styleClass="bold-info-text" text="FirstName" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="20.0" />
+      <TextField fx:id="firstNameField" disable="true" layoutX="298.0" layoutY="136.0" onKeyTyped="#firstNameChanged" prefWidth="250.0" styleClass="info-text" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0" />
+      <Label fx:id="surnameLabel" styleClass="bold-info-text" text="Surname" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="100.0" />
+      <TextField fx:id="surnameField" disable="true" layoutX="298.0" layoutY="200.0" onKeyTyped="#surnameChanged" prefWidth="250.0" styleClass="info-text" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="130.0" />
+      <Label fx:id="addressLabel" styleClass="bold-info-text" text="Address" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="180.0" />
+      <TextField fx:id="addressField" disable="true" layoutX="298.0" layoutY="263.0" onKeyTyped="#addressChanged" prefWidth="250.0" styleClass="info-text" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="210.0" />
+      <Label fx:id="postCodeLabel" styleClass="bold-info-text" text="PostCode" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="260.0" />
+      <TextField fx:id="postCodeField" disable="true" layoutX="298.0" layoutY="322.0" onKeyTyped="#postCodeChanged" styleClass="info-text" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="290.0" />
+      <Label fx:id="cityLabel" layoutX="97.0" layoutY="366.0" styleClass="bold-info-text" text="City" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="340.0" />
+      <TextField fx:id="cityField" disable="true" layoutX="51.0" layoutY="397.0" onKeyTyped="#cityChanged" styleClass="info-text" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="370.0" />
+      <Label fx:id="phoneLabel" layoutX="87.0" layoutY="420.0" styleClass="bold-info-text" text="Phone" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="420.0" />
+      <TextField fx:id="phoneField" disable="true" layoutX="50.0" layoutY="464.0" onKeyTyped="#phoneChanged" styleClass="info-text" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="450.0" />
+      <Label fx:id="emailLabel" layoutX="575.0" layoutY="54.0" prefHeight="23.0" prefWidth="71.0" styleClass="bold-info-text" text="Email" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="20.0" />
+      <TextField fx:id="emailTextField" disable="true" layoutX="575.0" layoutY="50.0" onKeyTyped="#eMailChanged" prefHeight="25.0" prefWidth="237.0" styleClass="info-text" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="50.0" />
+      <Label fx:id="cardLabel" styleClass="bold-info-text" text="Card" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="100.0" />
+      <ComboBox fx:id="cardComboBox" disable="true" editable="true" layoutX="577.0" layoutY="132.0" prefHeight="35.0" prefWidth="169.0" styleClass="info-text" AnchorPane.leftAnchor="576.0" AnchorPane.topAnchor="131.0" />
+      <Label fx:id="cardNrLabel" styleClass="bold-info-text" text="CardNr" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="180.0" />
+      <TextField fx:id="cardNrField" disable="true" layoutX="450.0" layoutY="130.0" onKeyTyped="#cardNrChanged" prefWidth="200.0" styleClass="info-text" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="210.0" />
+      <Label fx:id="validDateLabel" styleClass="bold-info-text" text="ValidDate" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="260.0" />
+      <TextField fx:id="validMonthField" disable="true" layoutX="577.0" layoutY="292.0" onKeyTyped="#validMonthChanged" prefHeight="35.0" prefWidth="55.0" promptText="MM" styleClass="info-text" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="290.0" />
+      <Label fx:id="cvvLabel" styleClass="bold-info-text" text="CVV" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="340.0" />
+      <TextField fx:id="cvvField" disable="true" layoutX="450.0" layoutY="290.0" onKeyTyped="#cvvChanged" prefWidth="100.0" styleClass="info-text" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="370.0" />
+      <Button fx:id="editButton" layoutX="450.0" layoutY="517.0" mnemonicParsing="false" onMouseReleased="#editMyInformation" prefHeight="32.0" prefWidth="80.0" styleClass="info-text" text="editButton" AnchorPane.leftAnchor="575.0" AnchorPane.topAnchor="445.0" />
+      <ImageView fx:id="firstNameStatus" fitHeight="32.0" fitWidth="32.0" layoutX="331.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="315.0" AnchorPane.topAnchor="50.0">
+         <image>
+            <Image url="@../resources/Not_ok_icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="surnameStatus" fitHeight="32.0" fitWidth="32.0" layoutX="347.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="315.0" AnchorPane.topAnchor="130.0">
+         <image>
+            <Image url="@../resources/Not_ok_icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="addressStatus" fitHeight="32.0" fitWidth="32.0" layoutX="357.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="315.0" AnchorPane.topAnchor="210.0">
+         <image>
+            <Image url="@../resources/Not_ok_icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="postCodeStatus" fitHeight="32.0" fitWidth="32.0" layoutX="357.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="315.0" AnchorPane.topAnchor="290.0">
+         <image>
+            <Image url="@../resources/Not_ok_icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cityStatus" fitHeight="32.0" fitWidth="32.0" layoutX="357.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="315.0" AnchorPane.topAnchor="370.0">
+         <image>
+            <Image url="@../resources/Not_ok_icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="phoneStatus" fitHeight="32.0" fitWidth="32.0" layoutX="357.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="315.0" AnchorPane.topAnchor="450.0">
+         <image>
+            <Image url="@../resources/Not_ok_icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="emailStatus" fitHeight="32.0" fitWidth="32.0" layoutX="357.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="820.0" AnchorPane.topAnchor="50.0">
+         <image>
+            <Image url="@../resources/Not_ok_icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cardNrStatus" fitHeight="32.0" fitWidth="32.0" layoutX="357.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="780.0" AnchorPane.topAnchor="210.0">
+         <image>
+            <Image url="@../resources/Not_ok_icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="validDateStatus" fitHeight="32.0" fitWidth="32.0" layoutX="770.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../resources/Not_ok_icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cvvStatus" fitHeight="32.0" fitWidth="32.0" layoutX="357.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="690.0" AnchorPane.topAnchor="370.0">
+         <image>
+            <Image url="@../resources/Not_ok_icon.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="validYearField" disable="true" layoutX="672.0" layoutY="292.0" onKeyTyped="#validYearChanged" prefHeight="35.0" prefWidth="91.0" promptText="YY" styleClass="info-text" />
+      <Label fx:id="postCodeErrorMessageLabel" layoutX="358.0" layoutY="293.0" prefHeight="32.0" text="onlyDigits" textFill="#dd0d0d" visible="false" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="292.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="phoneErrorMassageLabel" layoutX="365.0" layoutY="458.0" prefHeight="32.0" text="onlyDigits" textFill="#dd0d0d" visible="false" AnchorPane.leftAnchor="364.0" AnchorPane.topAnchor="457.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="cardNrErrorMassageLabel" layoutX="375.0" layoutY="468.0" prefHeight="32.0" text="onlyDigits" textFill="#dd0d0d" visible="false" AnchorPane.leftAnchor="830.0" AnchorPane.topAnchor="210.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="validDateErrorMassageLabel" layoutX="385.0" layoutY="477.0" prefHeight="32.0" text="onlyDigits" textFill="#dd0d0d" visible="false" AnchorPane.leftAnchor="800.0" AnchorPane.topAnchor="292.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="cvvErrorMassageLabel" layoutX="385.0" layoutY="478.0" prefHeight="32.0" text="onlyDigits" textFill="#dd0d0d" visible="false" AnchorPane.leftAnchor="730.0" AnchorPane.topAnchor="370.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="639.0" layoutY="301.0" styleClass="info-text" text="/" AnchorPane.leftAnchor="645.0" AnchorPane.topAnchor="295.0" />
+   </children>
+</fx:root>

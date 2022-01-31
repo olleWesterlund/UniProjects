@@ -1,0 +1,32 @@
+#name
+Tobias Engblom
+#image
+product_sample.jpg
+#email
+gusengblto@student.gu.se
+#phonenumber
+0702099320
+#name
+Olle Westerlund
+#image
+product_sample.jpg
+#email
+guswesteol@student.gu.se
+#phonenumber
+0000000000
+#name
+Magnus Eld
+#image
+product_sample.jpg
+#email
+me@gu.se
+#phonenumber
+0000000000
+#name
+Örjan Söderlind
+#image
+product_sample.jpg
+#email
+ös@gu.se
+#phonenumber
+0000000000

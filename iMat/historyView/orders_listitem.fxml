@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<fx:root minHeight="120.0" prefHeight="135.0" prefWidth="1032.0" styleClass="list-item" stylesheets="@../iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Line endX="100.0" endY="133.5" layoutX="86.0" layoutY="77.0" startX="100.0" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="0.0" />
+      <Line endX="14.292893409729004" endY="54.29292297363281" layoutX="444.0" layoutY="78.0" startX="14.0" startY="-78.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="759.0" AnchorPane.topAnchor="0.0" />
+      <Label layoutX="36.0" layoutY="41.0" styleClass="bold-info-text" text="Status:" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="20.0" />
+      <Label fx:id="orderStatusLabel" layoutX="36.0" layoutY="83.0" styleClass="bold-info-text" text="orderStatus" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="55.0" />
+      <Label fx:id="sumLabel" layoutX="191.0" layoutY="27.0" styleClass="bold-info-text" text="Sum" AnchorPane.leftAnchor="185.0" AnchorPane.topAnchor="20.0" />
+      <Label fx:id="dateLabel" layoutX="191.0" layoutY="70.0" styleClass="bold-info-text" text="Date" AnchorPane.leftAnchor="185.0" AnchorPane.topAnchor="55.0" />
+      <Label fx:id="orderNrLabel" layoutX="191.0" layoutY="110.0" styleClass="bold-info-text" text="OrderNr" AnchorPane.leftAnchor="185.0" AnchorPane.topAnchor="90.0" />
+      <Button fx:id="showDetails" layoutX="497.0" layoutY="79.0" mnemonicParsing="false" onMouseClicked="#onClick" styleClass="info-text" text="Button" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="760.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</fx:root>

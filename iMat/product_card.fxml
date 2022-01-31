@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root id="product-list-item" onMouseClicked="#onClick" prefHeight="300.0" prefWidth="205.0" styleClass="list-item" stylesheets="@iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="productImage" fitHeight="170.0" fitWidth="170.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="14.0">
+         <image>
+            <Image url="@resources/product_sample.jpg" />
+         </image></ImageView>
+      <Label fx:id="productLabel" alignment="CENTER" contentDisplay="TOP" layoutX="2.0" layoutY="150.0" prefWidth="203.0" styleClass="bold-info-text" text="Ekologisk kyckling hel&#10;" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Label fx:id="priceLabel" alignment="CENTER" layoutX="25.0" layoutY="182.0" styleClass="extra-info-text" text="Jfr-pris 75,80 kr/kg." AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="195.0" />
+      <Label fx:id="totalPriceLabel" alignment="CENTER" layoutX="51.0" layoutY="211.0" styleClass="bold-info-text" text="38,00kr" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="220.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="12.0" layoutY="244.0" prefHeight="50.0" prefWidth="180.0">
+         <children>
+            <AnchorPane layoutX="407.0" layoutY="150.0" pickOnBounds="false" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Circle id="plus-button-active" fx:id="plusButton" accessibleRole="BUTTON" fill="#da1a31" onMouseClicked="#incrementProductAmount" radius="24.0" stroke="BLACK" strokeWidth="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Label alignment="CENTER" mouseTransparent="true" text="+" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Monospaced Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="productAmountField" alignment="CENTER" layoutX="52.0" layoutY="12.0" onKeyTyped="#keyTypedAmountLabel" prefHeight="26.0" prefWidth="38.0" styleClass="extra-info-text" text="0" />
+            <Label fx:id="productSuffixLabel" contentDisplay="CENTER" layoutX="92.0" prefHeight="50.0" prefWidth="34.0" styleClass="extra-info-text" text="st" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutY="5.0" pickOnBounds="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Circle id="minus-button-active" fx:id="minusButton" accessibleRole="BUTTON" fill="#aba6a6" onMouseClicked="#decrementProductAmount" radius="24.0" stroke="BLACK" strokeWidth="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Label alignment="CENTER" mouseTransparent="true" text="-" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Monospaced Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ecoPane" layoutX="22.0" layoutY="97.0" prefHeight="38.0" prefWidth="38.0" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="97.0">
+         <children>
+            <Circle fill="#00b722" layoutX="19.0" layoutY="14.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Text fill="WHITE" layoutX="5.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EKO" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="10.46484375">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</fx:root>

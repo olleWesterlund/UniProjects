@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="600.0" prefWidth="1050.0" stylesheets="@../iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="119.0" prefWidth="1050.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="41.0" fitWidth="594.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="50.0">
+               <image>
+                  <Image url="@../resources/progressbar3.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="circleIndicatorOneTitle1" alignment="CENTER" text="Namn" AnchorPane.leftAnchor="275.0" AnchorPane.topAnchor="55.0">
+               <font>
+                  <Font name="Verdana Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="circleIndicatorOneTitle11" alignment="CENTER" prefHeight="26.0" prefWidth="110.0" text="Adress" AnchorPane.leftAnchor="410.0" AnchorPane.topAnchor="55.0">
+               <font>
+                  <Font name="Verdana Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="circleIndicatorOneTitle111" alignment="CENTER" prefHeight="26.0" prefWidth="153.0" text="Betalning" textFill="WHITE" AnchorPane.leftAnchor="555.0" AnchorPane.topAnchor="55.0">
+               <font>
+                  <Font name="Verdana Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="continueButton" defaultButton="true" layoutX="601.0" layoutY="499.00000000000006" mnemonicParsing="false" onMouseClicked="#continueButtonClicked" prefWidth="135.0" text="Fortsätt" AnchorPane.leftAnchor="600.0" AnchorPane.topAnchor="500.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="backButton" cancelButton="true" layoutX="256.0" layoutY="500.00000000000006" mnemonicParsing="false" onMouseClicked="#backButtonClicked" prefWidth="135.0" text="Tillbaka" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="500.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="cardLabel" layoutX="253.0" layoutY="186.0" styleClass="info-text" text="Card" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="185.0" />
+      <ComboBox fx:id="cardTypeComboBox" layoutX="254.0" layoutY="208.0" prefWidth="276.0" styleClass="TextField" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="210.0" />
+      <Label fx:id="cardNrLabel" layoutX="253.0" layoutY="249.0" styleClass="info-text" text="CardNr" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="250.0" />
+      <TextField fx:id="cardNrTextField" layoutX="253.0" layoutY="271.0" onKeyTyped="#textFieldChanged" prefWidth="276.0" styleClass="TextField" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="270.0" />
+      <Label fx:id="validDateLabel" layoutX="253.0" layoutY="311.0" styleClass="info-text" text="ValidDate" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="310.0" />
+      <TextField fx:id="monthTextField" layoutX="253.0" layoutY="333.0" onKeyTyped="#textFieldChanged" prefHeight="35.0" prefWidth="80.0" promptText="MM" styleClass="TextField" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="335.0" />
+      <Label styleClass="info-text" text="/" AnchorPane.leftAnchor="384.0" AnchorPane.topAnchor="340.0" />
+      <TextField fx:id="yearTextField" layoutX="355.0" layoutY="333.0" onKeyTyped="#textFieldChanged" prefHeight="35.0" prefWidth="175.0" promptText="YY" styleClass="TextField" AnchorPane.leftAnchor="395.0" AnchorPane.topAnchor="335.0" />
+      <Label fx:id="cvvLabel" layoutX="253.0" layoutY="373.0" styleClass="info-text" text="CVV" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="375.0" />
+      <TextField fx:id="cvvTextField" layoutX="253.0" layoutY="395.0" onKeyTyped="#textFieldChanged" prefWidth="276.0" styleClass="TextField" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="395.0" />
+      <ImageView fx:id="cardNrStatusImage" fitHeight="32.0" fitWidth="32.0" layoutX="533.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="270.0">
+         <image>
+            <Image url="@../resources/Not_ok_icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="dateStatusImage" fitHeight="32.0" fitWidth="32.0" layoutX="533.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="335.0">
+         <image>
+            <Image url="@../resources/Not_ok_icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cvvStatusImage" fitHeight="32.0" fitWidth="32.0" layoutX="585.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="395.0">
+         <image>
+            <Image url="@../resources/Not_ok_icon.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="cardNrErrorMessageLabel" layoutX="585.0" layoutY="258.0" text="Endast siffror (0-9)" textFill="#dd0d0d" visible="false" AnchorPane.leftAnchor="630.0" AnchorPane.topAnchor="270.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="validDateErrorMessageLabel" layoutX="595.0" layoutY="268.0" text="Endast siffror (0-9)" textFill="#dd0d0d" visible="false" AnchorPane.leftAnchor="630.0" AnchorPane.topAnchor="335.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="cvvErrorMessageLabel" layoutX="605.0" layoutY="278.0" text="Endast siffror (0-9)" textFill="#dd0d0d" visible="false" AnchorPane.leftAnchor="630.0" AnchorPane.topAnchor="395.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="17.0" layoutY="453.0" prefHeight="50.0" style="-fx-background-color: #EBF4EA;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   </children>
+</fx:root>

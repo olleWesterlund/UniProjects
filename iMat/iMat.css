@@ -1,0 +1,214 @@
+* {
+    -background-color:             #EBF4EA; /* light green - from the fifties*/
+    -focus-color:                  #C9C9C9; /* gray        */
+    -focus-color:                  #FFFFFF; /* white       */
+    -pyjamas-dark-color:           #EFEFED; /* light yellow, almost white */
+    -focus-window-background:      -pyjamas-light-color; /* light yellow, almost white */
+    -focus-window-border-color:    #BABABA;
+    -pyjamas-light-color:          #FFFFF8; /* extremely light yellow, another word for white */
+    -focus-window-color: -pyjamas-light-color;
+    -focus-default-color:          #63AA5D; /* green        */
+    -focus-hover-color:            #177819; /* dark green  */
+    -focus-action-color:           #076809; /* even darker green  */
+    -focus-contrast-default-color: #FF8E00; /* orange       */
+    -focus-contrast-hover-color:   #AA5E00; /* dark orange  */
+    -focus-contrast-action-color:  #804600; /* even darker orange  */
+    -field-background-color:       -pyjamas-light-color; /* Used for editable fields */
+    -list-item-color:              #f3f3f3; /* light gray for productcards */
+    -popup-color:                  -list-item-color; /* light gray for productcards */
+    -light-focus-default-color:    #999999; /* gray         */
+    -light-focus-hover-color:      #5A5657; /* dark gray    */
+    -light-focus-inactive-color:   #EAEAEA; /* light gray   */
+    -item-border-color:            -light-focus-default-color;
+    -pressed-color:                #D0D0D0;
+    -text-background-color:        #F0F0F0;
+    -border-color:                 #E0E0E0;
+    -dark-transparent-background:  rgba(0, 0, 0, 0.60);
+}
+#logo {
+    -fx-font-size: 70px;
+    -fx-font-family: verdana;
+}
+.popup{
+    -fx-background-color: -popup-color;
+}
+.popup-background-transparent{
+    -fx-background-color: -dark-transparent-background;
+}
+.application-main-color {
+    -fx-background-color: -background-color;
+}
+.application-focus-window {
+    -fx-background-color: -focus-window-background;
+    -fx-border-color: -focus-window-border-color;
+    -fx-border-radius: 0px;
+}
+.search-list{
+    -fx-background-color: -field-background-color;
+}
+.TextField{
+    -fx-background-color: -field-background-color;
+    -fx-font-size: 18px;
+    -fx-font-family: verdana;
+}
+.info-text {
+    -fx-font-size: 18px;
+    -fx-font-family: verdana;
+}
+.melt-into-background {
+    -fx-background-color: -application-main-color;
+}
+.bold-info-text {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-font-family: verdana;
+}
+.title-text {
+    -fx-font-size: 40px;
+    -fx-font-family: verdana;
+}
+.extra-info-text {
+    -fx-font-size: 15px;
+    -fx-font-family: verdana;
+}
+.list-item {
+    -fx-border-width: 1px;
+    -fx-border-color: -item-border-color;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+}
+.list-item-low {
+    -fx-border-width: 1px;
+    -fx-border-color: -border-color;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-border-style: solid outside;
+}
+.pyjamas-list-light {
+    -fx-background-color: -pyjamas-light-color;
+}
+.pyjamas-list-dark {
+    -fx-background-color: -pyjamas-dark-color;
+}
+#product-list-item:hover {
+    -fx-background-color: -list-item-color;
+}
+#product-list-item:hover {
+    -fx-background-color: -focus-color;
+    -fx-border-style: solid outside;
+}
+#product-list-item:pressed {
+/*
+    -fx-border-style: solid inside;
+    */
+}
+.text-area .content {
+     -fx-background-color: -text-background-color;
+}
+.text-area {
+     -fx-background-color: -field-background-color;
+}
+.text-area *.text {
+     -fx-text-alignment: center;
+}
+.detail-text-area {
+     -fx-background-color: -field-background-color;
+     -fx-font-family: verdana;
+     -fx-font-size: 18px;
+}
+.detail-text-area .text {
+     -fx-text-alignment: left;
+}
+.radio-button .dot {
+    -fx-background-radius: 5px;
+    -fx-padding: 3px;
+}
+
+#plus-button-passive {
+    -fx-stroke-width: 2px;
+    -fx-stroke-type: centered;
+    -fx-stroke: -focus-contrast-default-color;
+    -fx-fill: -focus-contrast-default-color; /* #D11848 */
+}
+#plus-button-passive:hover {
+    -fx-stroke: -focus-contrast-hover-color;
+    -fx-fill: -focus-contrast-hover-color; /* #A10B32; */
+}
+#plus-button-passive:pressed {
+    -fx-stroke: -list-item-color;
+}
+#plus-button-active {
+    -fx-stroke-width: 2px;
+    -fx-stroke-type: centered;
+    -fx-stroke: #63AA5D;
+    -fx-fill: #63AA5D;
+}
+#progress-bar-dot-current{
+    -fx-fill:   -focus-hover-color; /* #177819 */
+}
+#progress-bar-text-current{
+    -fx-fill:   -pyjamas-dark-color; /* #177819 */
+}
+#progress-bar-dot-passed{
+    -fx-fill:   -focus-contrast-default-color; /* #177819 */
+}
+#progress-bar-text-passed{
+    -fx-fill:   -pyjamas-dark-color; /* #177819 */
+}
+#progress-bar-dot-next{
+    -fx-fill:   -focus-contrast-default-color; /* #177819 */
+}
+#progress-bar-text-next{
+    -fx-fill:   -pyjamas-dark-color; /* #177819 */
+}
+
+#plus-button-active:hover {
+    -fx-stroke: -focus-hover-color; /* #177819 */
+    -fx-fill:   -focus-hover-color; /* #177819 */
+}
+#plus-button-active:pressed {
+    -fx-stroke: -list-item-color;
+}
+#minus-button-active {
+    -fx-stroke-width: 2px;
+    -fx-stroke-type: centered;
+    -fx-stroke: -light-focus-default-color;
+    -fx-fill: -light-focus-default-color; /* #999999 */
+}
+#minus-button-active:hover {
+    -fx-stroke: -light-focus-hover-color;
+    -fx-fill: -light-focus-hover-color; /* #5A5657 */
+}
+#minus-button-active:pressed {
+    -fx-stroke: -list-item-color;
+}
+#minus-button-passive {
+    -fx-stroke: -light-focus-inactive-color;
+    -fx-fill: -light-focus-inactive-color; /* #EAEAEA */
+}
+#prominent-button-disabled {
+    -fx-background-color: -light-focus-inactive-color; /* #177819 */
+}
+.prominent-button {
+    -fx-background-color: -focus-hover-color; /* #177819 */
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-family: verdana;
+    -fx-font-weight: bold;
+}
+.prominent-button:hover {
+    -fx-background-color: -focus-default-color; /* #63AA5D */
+}
+.prominent-button:pressed {
+    -fx-background-color: -focus-action-color; /* #076809 */
+}
+#prominent-button-orange {
+    -fx-text-fill: #202E39;
+    -fx-background-color: -focus-contrast-default-color; /* #FF8E00 */
+}
+#prominent-button-orange:hover {
+    -fx-background-color: -focus-contrast-hover-color; /* #AA5E00 */
+}
+#prominent-button-orange:pressed {
+    -fx-background-color: -focus-contrast-action-color; /* #804600 */
+}

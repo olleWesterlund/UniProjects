@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root id="product-list-item" fx:id="itemAnchorPane" onMouseClicked="#onClick" prefHeight="56.0" prefWidth="184.0" styleClass="list-item-low" stylesheets="@../iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="productLabel" layoutX="20.0" layoutY="13.0" prefHeight="30.0" prefWidth="195.0" text="Product category" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="13.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</fx:root>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root id="product-list-item" prefHeight="190.0" prefWidth="920.0" styleClass="list-item-low" stylesheets="@../iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" layoutX="79.0" layoutY="14.0" prefHeight="30.0" prefWidth="762.0" styleClass="bold-info-text" text="Din sökning gav inga träffar." wrapText="true" />
+      <TextArea editable="false" layoutX="16.0" layoutY="57.0" prefHeight="120.0" prefWidth="888.0" style="-fx-background-color: #FFFFFF;" styleClass="TextField" text="Ändra sökningen och sök igen.&#10;&#10;Du kan också leta rätt på varor genom att klicka på en av kategorierna nedan.&#10;Kategorierna går även att välja i menyn till vänster." wrapText="true" />
+   </children>
+</fx:root>

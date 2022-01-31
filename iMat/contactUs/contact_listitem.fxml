@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root prefHeight="149.0" prefWidth="1034.0" styleClass="list-item" stylesheets="@../iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="profilePic" fitHeight="100.0" fitWidth="100.0" layoutX="24.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+      <Label alignment="CENTER_RIGHT" layoutX="178.0" layoutY="22.0" prefHeight="18.0" prefWidth="140.0" styleClass="info-text" text="Namn:" />
+      <Label alignment="CENTER_RIGHT" layoutX="178.0" layoutY="66.0" prefHeight="18.0" prefWidth="140.0" styleClass="info-text" text="E-post:" />
+      <Label alignment="CENTER_RIGHT" layoutX="178.0" layoutY="110.0" prefHeight="18.0" prefWidth="140.0" styleClass="info-text" text="Mobilnummer:" />
+      <Label fx:id="nameLabel" layoutX="328.0" layoutY="23.0" prefHeight="18.0" prefWidth="150.0" styleClass="info-text" text="nameLabel" />
+      <Label fx:id="emailLabel" layoutX="328.0" layoutY="67.0" prefHeight="18.0" prefWidth="250.0" styleClass="info-text" text="emailLabel" />
+      <Label fx:id="phoneLabel" layoutX="328.0" layoutY="111.0" prefHeight="18.0" prefWidth="150.0" styleClass="info-text" text="phoneLabel" />
+   </children>
+</fx:root>

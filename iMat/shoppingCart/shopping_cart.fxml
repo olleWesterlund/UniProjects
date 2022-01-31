@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="600.0" prefWidth="1050.0" stylesheets="@../iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="emptyCartLabel" alignment="CENTER" layoutX="189.0" layoutY="37.0" text="Inga varor i varukorgen!" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <FlowPane fx:id="productFlowPane" columnHalignment="CENTER" />
+         </content>
+      </ScrollPane>
+      <Button fx:id="emptyCartButton" alignment="TOP_CENTER" layoutX="14.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#clearShoppingCart" prefHeight="40.0" styleClass="prominent-button" text="Töm varukorgen" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="429.5" />
+      <Button id="prominent-button-orange" fx:id="restoreCartButton" alignment="TOP_CENTER" layoutX="24.0" layoutY="28.0" mnemonicParsing="false" onMouseClicked="#restoreShoppingCart" prefHeight="40.0" styleClass="prominent-button" text="Återställ varukorgen" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="408.5" />
+   </children>
+</fx:root>

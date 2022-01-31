@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root id="product-list-item" fx:id="itemAnchorPane" onMouseClicked="#onClick" prefHeight="75.0" prefWidth="920.0" styleClass="list-item-low" stylesheets="@../iMat.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="productLabel" layoutX="104.0" layoutY="20.0" prefHeight="30.0" prefWidth="418.0" text="Körsbärstomater  250g" AnchorPane.leftAnchor="104.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="priceLabel" alignment="CENTER_RIGHT" layoutX="614.0" layoutY="20.0" prefHeight="30.0" prefWidth="150.0" text="19 kr/st" AnchorPane.rightAnchor="165.60000000000002" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalPriceLabel" alignment="CENTER_RIGHT" layoutX="800.0" layoutY="20.0" prefHeight="20.0" prefWidth="96.0" text="38,00kr" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="productImage" fitHeight="120.0" fitWidth="85.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="5.0">
+         <image>
+            <Image url="@../resources/product_sample.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</fx:root>

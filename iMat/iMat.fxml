@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="750.0" minWidth="1300.0" prefHeight="750.0" prefWidth="1300.0" styleClass="application-main-color" stylesheets="@iMat.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.IMatController">
+   <children>
+      <AnchorPane fx:id="SearchTransparentPane" layoutX="45.0" layoutY="48.0" onMouseClicked="#closeSearchList" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="searchListPane" layoutX="250.0" layoutY="85.0" prefHeight="15.0" prefWidth="941.0" styleClass="search-list" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="85.0" />
+            <AnchorPane layoutY="149.0" prefHeight="618.0" prefWidth="1300.0" style="-fx-background-color: rgba(0, 0, 0, 0.25);" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="detailedProductView" onMouseReleased="#closeDetailedView" prefHeight="750.0" prefWidth="1300.0" styleClass="popup-background-transparent" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane onMouseReleased="#mouseTrap" styleClass="popup" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <AnchorPane layoutX="144.0" layoutY="297.0" prefHeight="50.0" prefWidth="150.0" AnchorPane.leftAnchor="85.0" AnchorPane.topAnchor="330.0">
+                     <children>
+                        <AnchorPane pickOnBounds="false" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Circle id="plus-button-active" fx:id="plusButton" accessibleRole="BUTTON" fill="#da1a31" radius="24.0" stroke="BLACK" strokeWidth="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" mouseTransparent="true" text="+" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Monospaced Bold" size="40.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="productAmountLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="61.0" layoutY="21.0" prefHeight="50.0" prefWidth="50.0" text="5 st" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutY="5.0" pickOnBounds="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Circle id="minus-button-active" fx:id="minusButton" accessibleRole="BUTTON" fill="#aba6a6" radius="24.0" stroke="BLACK" strokeWidth="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <Label alignment="CENTER" mouseTransparent="true" text="-" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Monospaced Bold" size="40.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fx:id="productPictureDetailView" fitHeight="220.0" fitWidth="290.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+                  <Label fx:id="productNameDetailView" alignment="TOP_LEFT" layoutX="189.0" layoutY="306.0" prefHeight="54.0" prefWidth="667.0" styleClass="title-text" text="productName" AnchorPane.leftAnchor="315.0" AnchorPane.topAnchor="20.0" />
+                  <ImageView fx:id="flagDetailView" fitHeight="50.0" fitWidth="65.0" layoutX="535.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="180.0">
+                     <image>
+                        <Image url="@resources/flag_sweden.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="closeDetailedButton" layoutX="390.0" layoutY="493.0" mnemonicParsing="false" onMouseReleased="#closeDetailedView" prefHeight="40.0" prefWidth="140.0" styleClass="info-text" text="Stäng" AnchorPane.leftAnchor="430.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="447.0" />
+                  <Label fx:id="detailedPriceLabel" layoutX="547.0" layoutY="270.0" prefHeight="73.0" prefWidth="173.0" styleClass="title-text" text="productCost" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="260.0" />
+                  <TextArea fx:id="textAreaDetail" editable="false" layoutX="312.0" layoutY="120.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="313.0" prefWidth="667.0" promptText="Text here" styleClass="detail-text-area" wrapText="true" AnchorPane.leftAnchor="315.0" AnchorPane.topAnchor="120.0" />
+                  <ImageView fx:id="detailedXButton" fitHeight="25.0" fitWidth="25.0" layoutX="957.0" layoutY="14.0" onMouseEntered="#closeButtonMouseEntered" onMouseExited="#closeButtonMouseExited" onMousePressed="#closeButtonMousePressed" onMouseReleased="#closeDetailedView" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="transparentPane" prefHeight="750.0" prefWidth="1000.0" styleClass="popup-background-transparent" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="secondInstructionPane" prefHeight="200.0" prefWidth="200.0" styleClass="popup" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="150.0">
+               <children>
+                  <ImageView fitHeight="41.0" fitWidth="594.0" layoutX="207.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/progressbar2.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="circleIndicatorOneTitle13" alignment="CENTER" layoutX="217.0" layoutY="60.0" prefHeight="26.0" prefWidth="131.0" text="Min sida">
+                     <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="circleIndicatorOneTitle113" alignment="CENTER" layoutX="365.0" layoutY="60.0" prefHeight="26.0" prefWidth="174.0" text="Lägg till vara" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="circleIndicatorOneTitle1112" alignment="CENTER" layoutX="533.0" layoutY="60.0" prefHeight="26.0" prefWidth="153.0" text="Betalning">
+                     <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="275.0" layoutY="120.0" prefHeight="30.0" styleClass="title-text" text="Lägga till en vara" wrapText="true" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="275.0" />
+                  <TextArea editable="false" layoutX="200.0" layoutY="181.0" prefHeight="106.0" prefWidth="500.0" styleClass="info-text" text="Genom att trycka på plus eller minus under en vara lägger du antingen till eller tar bort varan. Detta kommer synas direkt i varukorgen som du hittar längst upp till höger." wrapText="true" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
+                  <Button layoutX="204.0" layoutY="370.0" mnemonicParsing="false" onMouseClicked="#openFirstInstrView" prefHeight="40.0" prefWidth="140.0" styleClass="info-text" text="Föregående" />
+                  <Button layoutX="545.0" layoutY="370.0" mnemonicParsing="false" onMouseClicked="#openThirdInstrView" prefHeight="40.0" prefWidth="140.0" styleClass="info-text" text="Nästa" />
+                  <ImageView fx:id="secondCloseImage" fitHeight="25.0" fitWidth="25.0" layoutX="865.0" layoutY="10.0" onMouseEntered="#closeButtonMouseEntered" onMouseExited="#closeButtonMouseExited" onMousePressed="#closeButtonMousePressed" onMouseReleased="#closeButtonMouseReleased" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <image>
+                        <Image url="@resources/icon_close.png" />
+                     </image>
+                  </ImageView>
+                  <Circle accessibleRole="BUTTON" fill="#ff8e00" layoutX="495.0" layoutY="326.0" radius="24.0" stroke="#00000052" strokeWidth="2.0" />
+                  <Label alignment="CENTER" layoutX="483.0" layoutY="302.0" mouseTransparent="true" text="+" textFill="WHITE">
+                     <font>
+                        <Font name="Monospaced Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Circle accessibleRole="BUTTON" fill="#aba6a6" layoutX="405.0" layoutY="326.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Text fill="WHITE" layoutX="380.0" layoutY="337.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="-" textAlignment="CENTER" wrappingWidth="50.0">
+                     <font>
+                        <Font name="Monospaced Bold" size="40.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="welcomePane" layoutX="378.0" layoutY="234.0" prefHeight="200.0" prefWidth="200.0" styleClass="popup" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="150.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="161.0" layoutY="120.0" prefHeight="30.0" styleClass="title-text" text="Hej och välkommen till iMat!" wrapText="true" />
+                  <TextArea editable="false" layoutX="200.0" layoutY="181.0" prefHeight="82.0" prefWidth="500.0" styleClass="info-text" text="Här är en guide till hur du kommer igång. Om du fortfarande har några frågor och funderingar efter guiden är det bara att kontakta oss!" wrapText="true" />
+                  <Button alignment="CENTER" layoutX="545.0" layoutY="370.0" mnemonicParsing="false" onMouseClicked="#openFirstInstrView" prefHeight="40.0" prefWidth="140.0" styleClass="info-text" text="Nästa" />
+                  <ImageView fx:id="closeImageView" fitHeight="25.0" fitWidth="25.0" layoutX="576.0" layoutY="3.0" onMouseEntered="#closeButtonMouseEntered" onMouseExited="#closeButtonMouseExited" onMousePressed="#closeButtonMousePressed" onMouseReleased="#closeButtonMouseReleased" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <image>
+                        <Image url="@resources/icon_close.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="firstInstructionPane" prefHeight="200.0" prefWidth="200.0" styleClass="popup" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="150.0">
+               <children>
+                  <ImageView fitHeight="41.0" fitWidth="594.0" layoutX="207.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/progressbar1.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="circleIndicatorOneTitle1" alignment="CENTER" layoutX="207.0" layoutY="60.0" prefHeight="26.0" prefWidth="131.0" text="Min sida" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="circleIndicatorOneTitle11" alignment="CENTER" layoutX="357.0" layoutY="60.0" prefHeight="26.0" prefWidth="174.0" text="Lägg till vara">
+                     <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="circleIndicatorOneTitle111" alignment="CENTER" layoutX="529.0" layoutY="60.0" prefHeight="26.0" prefWidth="153.0" text="Betalning">
+                     <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="364.0" layoutY="120.0" styleClass="title-text" text="Min sida" wrapText="true" />
+                  <TextArea editable="false" layoutX="200.0" layoutY="181.0" prefHeight="134.0" prefWidth="500.0" styleClass="info-text" text="Första gången du handlar fyller du i dina uppgifter innan du betalar. Därefter finns dina uppgifter sparade hos oss. Dessa går att hitta i &quot;Mina uppgifter&quot;. Du kan även komma åt dina tidigare ordar i &quot;Mina ordrar&quot;." wrapText="true" />
+                  <Button layoutX="204.0" layoutY="370.0" mnemonicParsing="false" onMouseClicked="#openWelcomeView" prefHeight="40.0" prefWidth="140.0" styleClass="info-text" text="Föregående" />
+                  <Button layoutX="545.0" layoutY="370.0" mnemonicParsing="false" onMouseClicked="#openSecondInstrView" prefHeight="40.0" prefWidth="140.0" styleClass="info-text" text="Nästa" />
+                  <ImageView fx:id="firstCloseImage" fitHeight="25.0" fitWidth="25.0" layoutX="865.0" layoutY="10.0" onMouseEntered="#closeButtonMouseEntered" onMouseExited="#closeButtonMouseExited" onMousePressed="#closeButtonMousePressed" onMouseReleased="#closeButtonMouseReleased" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <image>
+                        <Image url="@resources/icon_close.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="thirdInstructionPane" prefHeight="200.0" prefWidth="200.0" styleClass="popup" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="150.0">
+               <children>
+                  <ImageView fitHeight="41.0" fitWidth="594.0" layoutX="207.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/progressbar3.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="circleIndicatorOneTitle12" alignment="CENTER" layoutX="207.0" layoutY="59.0" prefHeight="26.0" prefWidth="131.0" text="Min sida">
+                     <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="circleIndicatorOneTitle112" alignment="CENTER" layoutX="363.0" layoutY="59.0" prefHeight="26.0" prefWidth="174.0" text="Lägg till vara">
+                     <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="circleIndicatorOneTitle1111" alignment="CENTER" layoutX="527.0" layoutY="59.0" prefHeight="26.0" prefWidth="153.0" text="Betalning" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="204.0" layoutY="370.0" mnemonicParsing="false" onMouseClicked="#openSecondInstrView" prefHeight="40.0" prefWidth="140.0" styleClass="info-text" text="Föregående" />
+                  <Button layoutX="545.0" layoutY="370.0" mnemonicParsing="false" onMouseClicked="#closeInstructionView" prefHeight="40.0" prefWidth="140.0" styleClass="info-text" text="Börja handla" />
+                  <TextArea editable="false" layoutX="200.0" layoutY="181.0" prefHeight="106.0" prefWidth="500.0" styleClass="info-text" text="När du känner dig klar kan du antingen gå direkt till kassan, eller via varukorgen, och följa stegen.&#10;Efter att din betalning genomförts hittar du din order under &quot;Mina ordrar&quot;." wrapText="true" />
+                  <Label layoutX="355.0" layoutY="120.0" prefHeight="51.0" styleClass="title-text" text="Betalning" />
+                  <ImageView fx:id="thirdCloseImage" fitHeight="25.0" fitWidth="25.0" layoutX="865.0" layoutY="10.0" onMouseEntered="#closeButtonMouseEntered" onMouseExited="#closeButtonMouseExited" onMousePressed="#closeButtonMousePressed" onMouseReleased="#closeButtonMouseReleased" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <image>
+                        <Image url="@resources/icon_close.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane minHeight="750.0" minWidth="1000.0" prefHeight="750.0" prefWidth="1000.0" styleClass="application-main-color" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="nrOFItemsPane" layoutX="417.0" layoutY="160.0" pickOnBounds="false" prefHeight="27.0" prefWidth="30.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0">
+               <children>
+                  <Circle accessibleRole="BUTTON" fill="#63aa5d" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Text fx:id="nrOfItemsText" fill="WHITE" layoutX="-1.0" layoutY="21.650390625" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="32.0" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font name="Monospaced Bold" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <Button id="prominent-button-orange" fx:id="toPaymentButton" alignment="TOP_CENTER" mnemonicParsing="false" onMouseClicked="#displayOrderConfirmation" prefHeight="40.0" styleClass="prominent-button" text="Till Betalning" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="25.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <MenuBar prefHeight="25.0" styleClass="extra-info-text" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Start">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#displayStartView" text="Start" />
+                        <MenuItem mnemonicParsing="false" onAction="#displayMyDetails" text="Mina uppgifter" />
+                        <MenuItem mnemonicParsing="false" onAction="#displayHistoryView" text="Mina ordrar" />
+                        <MenuItem mnemonicParsing="false" onAction="#displayContactView" text="Kontakta oss" />
+                     </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Varor">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#displayEcoProducts" text="Ekologiska varor" />
+                        <MenuItem mnemonicParsing="false" onAction="#displayFruitsBerries" text="Frukt &amp; Bär" />
+                        <MenuItem mnemonicParsing="false" onAction="#displayVegetables" text="Grönsaker" />
+                        <MenuItem mnemonicParsing="false" onAction="#displayDairies" text="Mejeri, Ost &amp; Ägg" />
+                        <MenuItem mnemonicParsing="false" onAction="#displayBread" text="Bröd" />
+                        <MenuItem mnemonicParsing="false" onAction="#displayMeat" text="Kött" />
+                        <MenuItem mnemonicParsing="false" onAction="#displayFish" text="Fisk &amp; Skaldjur" />
+                        <MenuItem mnemonicParsing="false" onAction="#displayPasta" text="Pasta" />
+                        <MenuItem mnemonicParsing="false" onAction="#displayPotatoRice" text="Potatis &amp; Ris" />
+                        <MenuItem mnemonicParsing="false" onAction="#displayDrinks" text="Dryck" />
+                        <MenuItem mnemonicParsing="false" onAction="#displaySweet" text="Fika, Godis &amp; Snacks" />
+                        <MenuItem mnemonicParsing="false" onAction="#displayPantry" text="Skafferi" />
+                     </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Hjälp">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openFirstInstrView" text="Guide" />
+                        <MenuItem mnemonicParsing="false" onAction="#displayContactView" text="Kontakta oss" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Label id="logo" fx:id="iMatLabel" layoutX="59.0" layoutY="26.0" onMouseReleased="#displayStartView" prefHeight="73.0" text="iMat" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
+               <font>
+                  <Font name="Verdana" size="41.0" />
+               </font></Label>
+            <ListView id="application-menu" fx:id="startList" layoutY="100.0" prefHeight="150.0" prefWidth="225.0" styleClass="info-text" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="150.0" />
+            <ListView id="category-menu" fx:id="categoriesList" prefHeight="550.0" prefWidth="225.0" styleClass="info-text" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="325.0" />
+            <TextField fx:id="searchBar" layoutX="250.0" layoutY="49.0" onKeyTyped="#keyTypedSearchField" prefHeight="26.0" prefWidth="841.0" promptText="Skriv in en text här för att söka efter varor" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="109.0">
+               <font>
+                  <Font size="17.0" />
+               </font></TextField>
+            <ImageView fx:id="shoppingCart" fitHeight="40.0" fitWidth="55.0" layoutX="1135.0" layoutY="47.0" onMouseEntered="#shoppingCartMouseEntered" onMouseExited="#shoppingCartMouseExited" onMousePressed="#shoppingCartMousePressed" onMouseReleased="#displayShoppingCart" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="47.0">
+               <image>
+                  <Image url="@resources/shopping_cart.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="mainView" layoutX="183.0" layoutY="99.0" prefHeight="600.0" prefWidth="950.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0" />
+            <Button fx:id="toCheckout" alignment="TOP_CENTER" layoutX="1022.0" layoutY="33.0" mnemonicParsing="false" onMouseClicked="#displayCheckOut" prefHeight="40.0" styleClass="prominent-button" text="Till kassan" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="25.0">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Label fx:id="shoppingCartPrice" prefHeight="26.0" text="totalPrice" AnchorPane.bottomAnchor="600.0" AnchorPane.rightAnchor="25.0">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="titleLabel" layoutX="241.0" layoutY="100.0" text="En lång Rubrik" AnchorPane.bottomAnchor="600.0" AnchorPane.leftAnchor="250.0">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="searchIconImage" fitHeight="26.0" fitWidth="25.0" layoutX="1159.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/search-icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
